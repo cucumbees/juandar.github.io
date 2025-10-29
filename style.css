@@ -1,0 +1,144 @@
+/* Reset dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Layout utama */
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* agar tetap tengah meskipun panjang */
+    padding: 20px;
+}
+
+/* Kartu profil */
+.profile-container {
+    background-color: #fff;
+    width: 100%;
+    max-width: 400px; /* batasi lebar maksimal */
+    text-align: center;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Foto profil */
+.profile-img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid #ccc;
+}
+
+.photo-caption {
+    font-size: 0.9em;
+    color: #666;
+    margin-top: 8px;
+}
+
+/* Nama & deskripsi */
+.name {
+    margin-top: 10px;
+    color: #333;
+    font-size: 1.6em;
+}
+
+.description,
+.description-2 {
+    font-size: 0.95em;
+    color: #555;
+    margin: 10px 0 20px;
+    line-height: 1.4;
+}
+
+/* Bagian kontak */
+h3 {
+    color: #333;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+a {
+    color: #0073e6;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Bagian keahlian */
+.skills {
+    margin-top: 10px;
+}
+
+.skill {
+    background-color: #e6e6e6;
+    color: #333;
+    padding: 10px;
+    margin: 6px 0;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.skill:hover {
+    background-color: #d9d9d9;
+}
+
+/* --- 🌐 RESPONSIVE DESIGN --- */
+
+/* Untuk layar di bawah 480px (HP kecil) */
+@media (max-width: 480px) {
+    .profile-container {
+        padding: 20px;
+        border-radius: 12px;
+    }
+
+    .profile-img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .name {
+        font-size: 1.4em;
+    }
+
+    .description, .description-2 {
+        font-size: 0.9em;
+    }
+
+    .skill {
+        font-size: 0.9em;
+        padding: 8px;
+    }
+}
+
+/* Untuk layar besar (tablet ke atas) */
+@media (min-width: 768px) {
+    body {
+        background: linear-gradient(to bottom right, #f4f4f4, #eaeaea);
+    }
+
+    .profile-container {
+        max-width: 500px;
+        padding: 40px;
+    }
+
+    .name {
+        font-size: 1.8em;
+    }
+
+    .description, .description-2 {
+        font-size: 1em;
+    }
+
+    .skill {
+        font-size: 1em;
+    }
+}
